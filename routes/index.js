@@ -32,7 +32,7 @@ router.post("/book-room", function (req, res, next) {
           booking.RoomId === req.body.RoomId &&
           booking.Date == req.body.Date
         ) {
-          res.send("Room is booked for the selected date");
+          res.send("Room is already booked for the selected date. Try with a different date/room");
         } else {
           bookingData.push(req.body);
           res.send("Successfully booked a room");
